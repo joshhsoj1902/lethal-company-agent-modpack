@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.1
+
+Added OpenBodyCams.
+
 ## 0.2.0
 
 Added a whole bunch of new mods, haven't tested that this works yet.
