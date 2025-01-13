@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.4
+
+Update various versions & add some Mirage config
+
 ## 0.0.3
 
 Add missing MirageCore dependency.
