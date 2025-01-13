@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.3
+
+Add missing MirageCore dependency.
+
 ## 0.0.2
 
 Swap skinwalkers for Mirage.
