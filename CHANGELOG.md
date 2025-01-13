@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.5
+
+Add General Improvements config & remove weather mod.
+
 ## 0.0.4
 
 Update various versions & add some Mirage config
