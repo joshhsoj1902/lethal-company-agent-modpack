@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.6
+
+Swap out suits mod and add more suits
+
 ## 0.0.5
 
 Add General Improvements config & remove weather mod.
