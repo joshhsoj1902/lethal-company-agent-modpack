@@ -1,6 +1,6 @@
 {
     "name": "Agent_Modpack",
-    "version_number": "0.0.7",
+    "version_number": "0.1.1",
     "website_url": "https://github.com/joshhsoj1902/lethal-company-agent-modpack",
     "description": "A modpack used by the agents",
     "dependencies": [
@@ -23,49 +23,33 @@
         "xilophor-StaticNetcodeLib-1.1.1",
         "Kittenji-NavMeshInCompany-1.0.3",
 
-        /////////////////
-        // Essential Mods
-        /////////////////
+        /////////////////////////////
+        // Essential Multiplayer Mods
+        /////////////////////////////
         "notnotnotswipez-MoreCompany-1.11.0",
         "anormaltwig-LateCompany-1.0.18",
         "ShaosilGaming-GeneralImprovements-1.4.4",
+        "KlutzyBubbles-BetterEmotes-1.5.4",
 
-
-        ////////
         // Suits
-        ////////
         "x753-More_Suits-1.4.5",
         "Verity-TooManySuits-2.0.1",
         "GhostbustingTrio-CustomFunSuits-1.8.3",
         "kidcudilovers-CudisRealisticSuits-1.0.0",
         "404_Dom-Doms_Basic_Suit_Colors-1.4.4",
 
-        ///////////////////
-        // Client side mods
-        ///////////////////
-        "Sligili-HDLethalCompany-1.5.6",
-        "FlipMods-MoreBlood-1.0.3",
-        "sfDesat-ViewExtension-1.3.0",
-        "Confusified-InsanityDisplay-1.2.2",
-
         ///////////
         // QoL Mods
         ///////////
-        "fumiko-CullFactory-1.6.3",
-        "KlutzyBubbles-BetterEmotes-1.5.4",
-        "mrov-TerminalFormatter-0.2.25",
-        "alexanderjoe-LC_Symphony-1.3.0",
         "dummy-LetTheDeadRest-1.0.2",
-        "mrgrm7-LethalCasino-1.1.2",
         "FlipMods-ReservedItemSlotCore-2.0.39",
         "FlipMods-ReservedFlashlightSlot-2.0.8",
         "FlipMods-ReservedWalkieSlot-2.0.6",
         "FlipMods-ReservedSprayPaintSlot-1.1.2",
-        "tinyhoot-ShipLoot-1.1.0",
-        "FutureSavior-Hold_Scan_Button-1.1.2",
         "EliteMasterEric-Coroner-2.2.0",
         "taffyko-BetterSprayPaint-2.0.9",
         "Suskitech-AlwaysHearActiveWalkies-1.4.5",
+
 
         /////////////////////////////
         // Tweaking base game content
@@ -74,18 +58,41 @@
         "sunnobunno-YippeeMod-1.2.4",
         "qwbarch-Mirage-1.15.5",
         "qwbarch-MirageCore-1.0.3",
+        "mattplays-HoarderBugUseItems-1.0.3",
+
+        // Sound changes
+        "no00ob-LCSoundTool-1.5.1",
+        "Clementinise-CustomSounds-2.3.2",
+        "loaforc-loaforcsSoundAPI-1.1.7",
+        "ButteryStancakes-EnemySoundFixes-1.6.2",
+        "LethalResonance-LETHALRESONANCE-4.7.5",
+        "Sk737-JesterSymphony-1.2.0",
 
         /////////////////////////////////
         // Adding new content to the game
         /////////////////////////////////
+
+        // New loot & store items
         "Jordo-NeedyCats-1.2.2",
         "slayer6409-Emergency_Dice_Updated-1.7.4",
-        "Kittenji-Football-1.1.11",
         "SimonTendo-LCGoldScrapMod-2.0.6",
         "XuXiaolan-ImmersiveScrap-1.4.1",
         "Sconeys-abandonedcompanyassets-0.15.79",
+        "Flof-MemeSoundboard-1.1.2",
+        "Enchanted_Games-MoreSoundboardSounds-1.3.0",
+        "ohotdog-LootableMusicTapes-1.0.1",
+
+        // New creatures
+        "x753-Peepers-1.0.3",
+        "zealsprince-Locker-1.6.1",
+        "Kittenji-Football-1.1.11",
         "Sconeys-Gnomes-2.1.19",
         "Kittenji-Herobrine-1.3.6",
+        "XuXiaolan-PjonkGoose-1.5.0",
+
+        // New features
+        "Entity378-SellBodiesFixed-1.11.2",
+        "mrgrm7-LethalCasino-1.1.2",
 
         ///////////////////////
         // New dungeons & moons
@@ -99,13 +106,18 @@
         "AudioKnight-StarlancerMoons-2.4.0",
         "AudioKnight-Starlancer-2.0.0",
 
-        //////////////////////////
-        // Replaces default sounds
-        //////////////////////////
-        "no00ob-LCSoundTool-1.5.1",
-        "Clementinise-CustomSounds-2.3.2",
-        // This mod replaces a whole lot of default sounds but is barely used by anyone.
-        // It has less than 5000 downloads. I would love to know the backround of it...
-        "swny-Realistic_sfx-1.0.1"
+        ///////////////////
+        // Client side mods
+        ///////////////////
+        "Sligili-HDLethalCompany-1.5.6",
+        "FlipMods-MoreBlood-1.0.3",
+        "sfDesat-ViewExtension-1.3.0",
+        "Confusified-InsanityDisplay-1.2.2",
+        "fumiko-CullFactory-1.6.3",
+        "mrov-TerminalFormatter-0.2.25",
+        "alexanderjoe-LC_Symphony-1.3.0",
+        "tinyhoot-ShipLoot-1.1.0",
+        "FutureSavior-Hold_Scan_Button-1.1.2"
+
     ]
   }

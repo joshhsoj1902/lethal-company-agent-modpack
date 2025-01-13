@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.1
+
+Reorder modlist for my sake.
+
+## 0.1.0
+
+Swap out audio mod. Add a bunch more creature mods.
+
 ## 0.0.7
 
 Add emergency Dice config. Reorder manifest.
