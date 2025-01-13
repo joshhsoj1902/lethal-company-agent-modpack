@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.7
+
+Add emergency Dice config. Reorder manifest.
+
 ## 0.0.6
 
 Swap out suits mod and add more suits
