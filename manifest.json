@@ -1,6 +1,6 @@
 {
     "name": "Agent_Modpack",
-    "version_number": "0.2.1",
+    "version_number": "0.2.2",
     "website_url": "https://github.com/joshhsoj1902/lethal-company-agent-modpack",
     "description": "A modpack used by the agents",
     "dependencies": [
@@ -53,9 +53,7 @@
         "Monkeytype-HideChat-1.0.0",
         "tinyhoot-ShipLoot-1.1.0",
         "FutureSavior-Hold_Scan_Button-1.1.2",
-        // https://thunderstore.io/c/lethal-company/p/Spyci/CozyImprovements/
-        // Need to turn off some of the larger buttons.
-        // "Spyci-CozyImprovements-1.2.2",
+        "Spyci-CozyImprovements-1.2.2",
         "mrov-TerminalFormatter-0.2.25",
         "red_eye-LethalAutocomplete-0.4.5",
         "ViViKo-SpectateDeathCause-1.0.0",
@@ -95,9 +93,7 @@
         "Enchanted_Games-MoreSoundboardSounds-1.3.0",
         "ohotdog-LootableMusicTapes-1.0.1",
         "bigmcnugget-VanillaContentExpansion-0.1.8",
-        // https://thunderstore.io/c/lethal-company/p/etherealemil/UsualScrap/
-        // Need to disable the new tools added by this.
-        // "etherealemil-UsualScrap-1.7.7",
+        "etherealemil-UsualScrap-1.7.7",
         "Caigan-Tokucade_Scrap-1.7.0",
         "czech_lethal-AlltheScrapsMod-1.1.7",
         // This might be overkill

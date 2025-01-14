@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.2
+
+Enable CozyImprovements & UsualScrap.
+
 ## 0.2.1
 
 Added OpenBodyCams.
