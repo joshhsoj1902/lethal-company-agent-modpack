@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.1
+
+Add missing shared library.
+
 ## 0.4.0
 
 Another monster

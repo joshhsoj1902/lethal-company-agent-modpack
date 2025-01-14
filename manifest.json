@@ -1,6 +1,6 @@
 {
     "name": "Agent_Modpack",
-    "version_number": "0.4.0",
+    "version_number": "0.4.1",
     "website_url": "https://github.com/joshhsoj1902/lethal-company-agent-modpack",
     "description": "A modpack used by the agents",
     "dependencies": [
@@ -22,6 +22,7 @@
         "linkoid-DissonanceLagFix-1.0.0",
         "xilophor-StaticNetcodeLib-1.1.1",
         "Kittenji-NavMeshInCompany-1.0.3",
+        "NotAtomicBomb-TerminalApi-1.5.5",
 
         /////////////////////////////
         // Essential Multiplayer Mods
