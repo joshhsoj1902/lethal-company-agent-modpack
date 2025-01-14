@@ -1,6 +1,6 @@
 {
     "name": "Agent_Modpack",
-    "version_number": "0.4.1",
+    "version_number": "0.5.0",
     "website_url": "https://github.com/joshhsoj1902/lethal-company-agent-modpack",
     "description": "A modpack used by the agents",
     "dependencies": [
@@ -92,8 +92,6 @@
         "SimonTendo-LCGoldScrapMod-2.0.6",
         "XuXiaolan-ImmersiveScrap-1.4.1",
         "Sconeys-abandonedcompanyassets-0.15.79",
-        "Flof-MemeSoundboard-1.1.2",
-        "Enchanted_Games-MoreSoundboardSounds-1.3.0",
         "ohotdog-LootableMusicTapes-1.0.1",
         "bigmcnugget-VanillaContentExpansion-0.1.8",
         "etherealemil-UsualScrap-1.7.7",

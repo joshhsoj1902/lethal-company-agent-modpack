@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.5.0
+
+Removed the following mods:
+    - "Flof-MemeSoundboard-1.1.2"
+    - "Enchanted_Games-MoreSoundboardSounds-1.3.0",
+Dropping the ingame soundboard resulted in +100 weight, the code is private so I can't easily fix it.
+
 ## 0.4.1
 
 Add missing shared library.
