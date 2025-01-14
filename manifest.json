@@ -1,6 +1,6 @@
 {
     "name": "Agent_Modpack",
-    "version_number": "0.2.3",
+    "version_number": "0.3.0",
     "website_url": "https://github.com/joshhsoj1902/lethal-company-agent-modpack",
     "description": "A modpack used by the agents",
     "dependencies": [
@@ -30,6 +30,8 @@
         "anormaltwig-LateCompany-1.0.18",
         "ShaosilGaming-GeneralImprovements-1.4.4",
         "KlutzyBubbles-BetterEmotes-1.5.4",
+        "FlipMods-TooManyEmotes-2.2.14",
+
 
         // Suits
         "Hexnet111-SuitSaver-1.2.1",
@@ -97,10 +99,11 @@
         "Caigan-Tokucade_Scrap-1.7.0",
         // depends on deprecated package
         // "czech_lethal-AlltheScrapsMod-1.1.7",
-        // This might be overkill
-        "Pikmanfan2002-PikminScrap-2.0.0",
+        // I love pikmin, but these don't really match the correct theme
+        // "Pikmanfan2002-PikminScrap-2.0.0",
         // depends on deprecated package
         // "ViViKo-AllTheScrap-1.0.1",
+        "FlipMods-TooManyEmotesScrap-1.0.8",
 
         // New Store Items
         "Dio93-DuckMod-1.6.0",

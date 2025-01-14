@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.0
+
+Add toomanyemotes
+
 ## 0.2.3
 
 Add some more mods & configs
