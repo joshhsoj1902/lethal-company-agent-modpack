@@ -95,10 +95,12 @@
         "bigmcnugget-VanillaContentExpansion-0.1.8",
         "etherealemil-UsualScrap-1.7.7",
         "Caigan-Tokucade_Scrap-1.7.0",
-        "czech_lethal-AlltheScrapsMod-1.1.7",
+        // depends on deprecated package
+        // "czech_lethal-AlltheScrapsMod-1.1.7",
         // This might be overkill
         "Pikmanfan2002-PikminScrap-2.0.0",
-        "ViViKo-AllTheScrap-1.0.1",
+        // depends on deprecated package
+        // "ViViKo-AllTheScrap-1.0.1",
 
         // New Store Items
         "Dio93-DuckMod-1.6.0",
