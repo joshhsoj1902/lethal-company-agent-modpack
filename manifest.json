@@ -1,6 +1,6 @@
 {
     "name": "Agent_Modpack",
-    "version_number": "0.5.0",
+    "version_number": "0.5.1",
     "website_url": "https://github.com/joshhsoj1902/lethal-company-agent-modpack",
     "description": "A modpack used by the agents",
     "dependencies": [

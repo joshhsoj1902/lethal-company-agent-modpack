@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.1
+
+Make readme good.
+
 ## 0.5.0
 
 Removed the following mods:
