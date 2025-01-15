@@ -126,3 +126,11 @@ I'll likely try to add more later.
 - [FlipMods-MoreBlood](https://thunderstore.io/c/lethal-company/p/FlipMods/MoreBlood/)
 - [Confusified-InsanityDisplay](https://thunderstore.io/c/lethal-company/p/Confusified/InsanityDisplay/)
 - [fumiko-CullFactory](https://thunderstore.io/c/lethal-company/p/fumiko-CullFactory/)
+
+## Config changes
+
+This modpack also includes various opinionated config overrides. You can see the changes in the BepinEx/config folder of the git repo. But I'll highlight some of the changes here:
+
+- GeneralImprovements: Enabled the better monitors and configured them with various values.
+- Mirage: Configured it to act more like Skinwalkers, basically more creatures can talk and there are fewer changes to Maskeds.
+- TooManyEmotes: Enable all emotes.

@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.5.2
+
+Add config section to the readme.
+Enable all toomanyemotes emotes by default.
+
 ## 0.5.1
 
 Make readme good.
