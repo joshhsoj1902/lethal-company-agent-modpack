@@ -22,7 +22,7 @@ jobs:
         uses: actions/download-artifact@v4
 
       - name: list
-        run: ls -ltr
+        run: ls -ltr thunderstore-build
 
       - name: Upload artifacts to Release
         env:
