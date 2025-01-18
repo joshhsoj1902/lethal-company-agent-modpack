@@ -21,6 +21,9 @@ jobs:
       - name: Download all artifacts
         uses: actions/download-artifact@v4
 
+      - name: list
+        run: ls -ltr
+
       - name: Upload artifacts to Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB }}
