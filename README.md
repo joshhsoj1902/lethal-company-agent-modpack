@@ -134,3 +134,8 @@ This modpack also includes various opinionated config overrides. You can see the
 - GeneralImprovements: Enabled the better monitors and configured them with various values.
 - Mirage: Configured it to act more like Skinwalkers, basically more creatures can talk and there are fewer changes to Maskeds.
 - TooManyEmotes: Enable all emotes.
+
+## Links
+
+- [Thunderstore Modpack](https://thunderstore.io/c/lethal-company/p/joshhsoj1902/Agent_Modpack/)
+- [Github repo](https://github.com/joshhsoj1902/lethal-company-agent-modpack)
