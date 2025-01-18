@@ -32,5 +32,5 @@ jobs:
         env:
           TCLI_AUTH_TOKEN: ${{ secrets.thunderstore-token }}
         run: |
-          # tcli publish --file thunderstore-build/publish.zip --token ${{ TCLI_AUTH_TOKEN }}
+          # tcli publish --file thunderstore-build/publish.zip --token $TCLI_AUTH_TOKEN
           tcli publish --file thunderstore-build/publish.zip
