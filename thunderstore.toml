@@ -6,7 +6,7 @@ repository = "https://thunderstore.io"
 
 [package]
 namespace = "joshhsoj1902"
-name = "Agent_Modpack_TESTING"
+name = "Agent_Modpack"
 description = "A modpack used by the agents"
 websiteUrl = "https://github.com/joshhsoj1902/lethal-company-agent-modpack"
 containsNsfwContent = false
