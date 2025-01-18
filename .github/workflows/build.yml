@@ -32,6 +32,8 @@ jobs:
           dotnet-version: "8.0.100"
 
       - name: build zip
+        env:
+          VERSION: ${{ inputs.ref }}
         run: |
           ./do build
 
