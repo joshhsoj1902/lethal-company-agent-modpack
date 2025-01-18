@@ -5,29 +5,43 @@ on:
     types: [prereleased, released]
 
 jobs:
-  build:
-    uses: ./.github/workflows/build.yml
-    with:
-      ref: ${{ github.event.release.tag_name }}
+  # build:
+  #   uses: ./.github/workflows/build.yml
+  #   with:
+  #     ref: ${{ github.event.release.tag_name }}
 
   upload-release-artifacts:
-    name: Add artifacts to Release
-    needs: build
+    name: Release artifacts
+    # needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Fetch Sources
         uses: actions/checkout@v4
 
-      - name: Download all artifacts
-        uses: actions/download-artifact@v4
+      - name: Setup .NET environment
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0.100"
+
+      - name: Install Thunderstore CLI
+        run: |
+          dotnet tool install -g tcli
+
+      - name: Publish
+        env:
+          TCLI_AUTH_TOKEN: ${{ secrets.THUNDERSTORE_API_KEY }}
+        run: tcli publish --package-version ${{ github.event.release.tag_name }}
+
+      # - name: Download all artifacts
+      #   uses: actions/download-artifact@v4
 
       - name: Upload artifacts to Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB }}
-        run: gh release upload ${{ github.event.release.tag_name }} thunderstore/*
+        run: gh release upload ${{ github.event.release.tag_name }} dist/*
 
-  release-thunderstore:
-    needs: build
-    uses: ./.github/workflows/release-thunderstore.yml
-    secrets:
-      thunderstore-token: ${{ secrets.THUNDERSTORE_API_KEY }}
+  # release-thunderstore:
+  #   needs: build
+  #   uses: ./.github/workflows/release-thunderstore.yml
+  #   secrets:
+  #     thunderstore-token: ${{ secrets.THUNDERSTORE_API_KEY }}
