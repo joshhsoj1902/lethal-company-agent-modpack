@@ -31,15 +31,23 @@ jobs:
         with:
           dotnet-version: "8.0.100"
 
-      - name: build zip
-        env:
-          VERSION: ${{ inputs.ref }}
+      - name: Install Thunderstore CLI
         run: |
-          ./do build
+          dotnet tool install -g tcli
 
-      - name: Upload Thunderstore artifact
+      - name: Build
+        run: |
+          tcli build --package-version ${{ inputs.ref }}
+
+      # - name: Publish
+      #   env:
+      #     TCLI_AUTH_TOKEN: ${{ secrets.THUNDERSTORE_API_KEY }}
+      #   run: tcli publish
+
+      - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
-          name: thunderstore-build
-          path: ./publish.zip
+          name: thunderstore
+          path: ./dist/*
           retention-days: 7
+
