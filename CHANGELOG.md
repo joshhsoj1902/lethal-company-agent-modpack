@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.6.0
+
+Added the github actions config to automate building & publishing releases.
+
+Otherwise this should be a no-op change for modpack users.
+
 ## 0.5.2
 
 Add config section to the readme.

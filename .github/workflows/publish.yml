@@ -5,14 +5,8 @@ on:
     types: [prereleased, released]
 
 jobs:
-  # build:
-  #   uses: ./.github/workflows/build.yml
-  #   with:
-  #     ref: ${{ github.event.release.tag_name }}
-
   upload-release-artifacts:
     name: Release artifacts
-    # needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Fetch Sources
@@ -32,16 +26,7 @@ jobs:
           TCLI_AUTH_TOKEN: ${{ secrets.THUNDERSTORE_API_KEY }}
         run: tcli publish --package-version ${{ github.event.release.tag_name }}
 
-      # - name: Download all artifacts
-      #   uses: actions/download-artifact@v4
-
       - name: Upload artifacts to Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB }}
         run: gh release upload ${{ github.event.release.tag_name }} dist/*
-
-  # release-thunderstore:
-  #   needs: build
-  #   uses: ./.github/workflows/release-thunderstore.yml
-  #   secrets:
-  #     thunderstore-token: ${{ secrets.THUNDERSTORE_API_KEY }}
