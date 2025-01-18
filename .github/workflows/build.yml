@@ -51,3 +51,10 @@ jobs:
           name: thunderstore-build
           path: ./publish.zip
           retention-days: 7
+      - name: Upload blah artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: blah
+          path: ./dist/joshhsoj1902-Agent_Modpack-0.0.1.zip
+          retention-days: 7
+
