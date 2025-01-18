@@ -41,20 +41,20 @@ jobs:
       - name: debugging
         run: |
           dotnet tool install -g tcli
-          tcli build --package-version 0.0.5
+          tcli build --package-version ${{ inputs.ref }}
           ls -ltr
           ls -ltr dist
 
-      - name: Upload Thunderstore artifact
+      # - name: Upload Thunderstore artifact
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: thunderstore-build
+      #     path: ./publish.zip
+      #     retention-days: 7
+      - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
-          name: thunderstore-build
-          path: ./publish.zip
-          retention-days: 7
-      - name: Upload blah artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: blah
-          path: ./dist/joshhsoj1902-Agent_Modpack-0.0.1.zip
+          name: Upload build artifact
+          path: ./dist/*
           retention-days: 7
 
