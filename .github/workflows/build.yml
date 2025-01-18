@@ -41,7 +41,7 @@ jobs:
 
       - name: Publish
         env:
-          TCLI_AUTH_TOKEN: ${{ secrets.thunderstore-token }}
+          TCLI_AUTH_TOKEN: ${{ secrets.THUNDERSTORE_API_KEY }}
         run: tcli publish
 
       - name: Upload build artifact
