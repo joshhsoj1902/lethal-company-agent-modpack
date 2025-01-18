@@ -6,7 +6,26 @@ repository = "https://thunderstore.io"
 
 [package]
 namespace = "joshhsoj1902"
+name = "Agent_Modpack"
+description = "A modpack used by the agents"
+websiteUrl = "https://github.com/joshhsoj1902/lethal-company-agent-modpack"
 containsNsfwContent = false
+
+[package.dependencies]
+BepInEx-BepInExPack = "5.4.2100"
+
+[build]
+icon = "../icon.png"
+readme = "../README.md"
+outdir = "../MrovLib/dist"
+
+# [[build.copy]]
+# source = "../MrovLib/bin/Release/netstandard2.1/MrovLib.dll"
+# target = "/"
+
+# [[build.copy]]
+# source = "../LICENSE.md"
+# target = "/"
 
 [publish]
 communities = [ "lethal-company", ]
