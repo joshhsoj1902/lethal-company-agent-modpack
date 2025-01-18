@@ -1,0 +1,12 @@
+[config]
+schemaVersion = "0.0.1"
+
+[general]
+repository = "https://thunderstore.io"
+
+[package]
+namespace = "joshhsoj1902"
+containsNsfwContent = false
+
+[publish]
+communities = [ "lethal-company", ]
