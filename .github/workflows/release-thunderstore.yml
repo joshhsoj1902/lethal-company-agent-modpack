@@ -26,14 +26,11 @@ jobs:
 
       - name: Install Evaisa's netcode-patcher
         run: |
-          dotnet tool install -g Evaisa.NetcodePatcher.Cli
-
-      - name: Restore dotnet tools
-        run: |
-          dotnet tool restore
+          dotnet tool install -g tcli
 
       - name: Publish to Thunderstore
         env:
           TCLI_AUTH_TOKEN: ${{ secrets.thunderstore-token }}
         run: |
-          dotnet build -target:PublishThunderstore
+          # tcli publish --file thunderstore-build/publish.zip --token ${{ TCLI_AUTH_TOKEN }}
+          tcli publish --file thunderstore-build/publish.zip

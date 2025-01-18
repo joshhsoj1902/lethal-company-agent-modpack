@@ -29,8 +29,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB }}
         run: gh release upload ${{ github.event.release.tag_name }} thunderstore-build/publish.zip
 
-  # release-thunderstore:
-  #   needs: build
-  #   uses: ./.github/workflows/release-thunderstore.yml
-  #   secrets:
-  #     thunderstore-token: ${{ secrets.THUNDERSTORE_API_KEY }}
+  release-thunderstore:
+    needs: build
+    uses: ./.github/workflows/release-thunderstore.yml
+    secrets:
+      thunderstore-token: ${{ secrets.THUNDERSTORE_API_KEY }}
