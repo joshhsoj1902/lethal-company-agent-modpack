@@ -41,7 +41,7 @@ jobs:
       - name: debugging
         run: |
           dotnet tool install -g tcli
-          tcli build
+          tcli build --package-version 0.0.5
           ls -ltr
           ls -ltr dist
 
