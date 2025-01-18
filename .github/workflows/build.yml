@@ -40,6 +40,8 @@ jobs:
           tcli build --package-version ${{ inputs.ref }}
 
       - name: Publish
+        env:
+          TCLI_AUTH_TOKEN: ${{ secrets.thunderstore-token }}
         run: tcli publish
 
       - name: Upload build artifact
