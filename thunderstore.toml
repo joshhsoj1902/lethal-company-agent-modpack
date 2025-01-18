@@ -15,9 +15,9 @@ containsNsfwContent = false
 BepInEx-BepInExPack = "5.4.2100"
 
 [build]
-icon = "../icon.png"
-readme = "../README.md"
-outdir = "../MrovLib/dist"
+icon = "icon.png"
+readme = "README.md"
+outdir = "dist"
 
 # [[build.copy]]
 # source = "../MrovLib/bin/Release/netstandard2.1/MrovLib.dll"
