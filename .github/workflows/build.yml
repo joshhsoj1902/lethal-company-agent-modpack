@@ -31,30 +31,21 @@ jobs:
         with:
           dotnet-version: "8.0.100"
 
-      - name: build zip
-        env:
-          VERSION: ${{ inputs.ref }}
-        run: |
-          ./do build
-
-
-      - name: debugging
+      - name: Install Thunderstore CLI
         run: |
           dotnet tool install -g tcli
-          tcli build --package-version ${{ inputs.ref }}
-          ls -ltr
-          ls -ltr dist
 
-      # - name: Upload Thunderstore artifact
-      #   uses: actions/upload-artifact@v4
-      #   with:
-      #     name: thunderstore-build
-      #     path: ./publish.zip
-      #     retention-days: 7
+      - name: Build
+        run: |
+          tcli build --package-version ${{ inputs.ref }}
+
+      - name: Publish
+        run: tcli publish
+
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
-          name: Upload build artifact
+          name: thunderstore
           path: ./dist/*
           retention-days: 7
 

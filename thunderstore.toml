@@ -11,6 +11,18 @@ description = "A modpack used by the agents"
 websiteUrl = "https://github.com/joshhsoj1902/lethal-company-agent-modpack"
 containsNsfwContent = false
 
+[build]
+icon = "icon.png"
+readme = "README.md"
+outdir = "dist"
+
+[[build.copy]]
+source = "BepInEx"
+target = "/BepInEx"
+
+[publish]
+communities = [ "lethal-company", ]
+
 [package.dependencies]
 ###################
 ## Shared libraries
@@ -156,15 +168,3 @@ fumiko-CullFactory = "1.6.3"
 # Misc
 #######
 alexanderjoe-LC_Symphony = "1.3.0"
-
-[build]
-icon = "icon.png"
-readme = "README.md"
-outdir = "dist"
-
-[[build.copy]]
-source = "BepInEx"
-target = "/"
-
-[publish]
-communities = [ "lethal-company", ]
