@@ -26,6 +26,7 @@ target = "/BepInEx"
 
 [publish]
 communities = [ "lethal-company", ]
+categories = ["modpack"]
 
 [package.dependencies]
 ###################

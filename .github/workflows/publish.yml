@@ -3,13 +3,6 @@ name: Publish
 on:
   release:
     types: [prereleased, released]
-  workflow_call:
-    inputs:
-      tag:
-        description: "A tag reference passed from Publish workflow"
-        default: ${{ github.sha }}
-        required: false
-        type: string
 
 jobs:
   upload-release-artifacts:

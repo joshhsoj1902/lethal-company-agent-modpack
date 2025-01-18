@@ -1,10 +1,8 @@
 name: Build
 
 on:
-  # Trigger the workflow on pushes to only the 'main' branch (this avoids duplicate checks being run e.g., for dependabot pull requests)
   push:
     branches: [main]
-  # Trigger the workflow on any pull request
   pull_request:
 
 jobs:
@@ -32,10 +30,10 @@ jobs:
         run: |
           tcli build --package-version ${{ inputs.ref }}
 
-      - name: Publish
-        env:
-          TCLI_AUTH_TOKEN: ${{ secrets.THUNDERSTORE_API_KEY }}
-        run: tcli publish --package-version "0.5.20" --package-name Agent_Modpack_TESTING2
+      # - name: Publish
+      #   env:
+      #     TCLI_AUTH_TOKEN: ${{ secrets.THUNDERSTORE_API_KEY }}
+      #   run: tcli publish --package-version "0.5.20" --package-name Agent_Modpack_TESTING2
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
