@@ -14,8 +14,11 @@ containsNsfwContent = false
 [build]
 icon = "icon.png"
 readme = "README.md"
-changelog = "CHANGELOG.md"
 outdir = "dist"
+
+[[build.copy]]
+source = "CHANGELOG.md"
+target = "/"
 
 [[build.copy]]
 source = "BepInEx"
