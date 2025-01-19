@@ -135,6 +135,12 @@ This modpack also includes various opinionated config overrides. You can see the
 - Mirage: Configured it to act more like Skinwalkers, basically more creatures can talk and there are fewer changes to Maskeds.
 - TooManyEmotes: Enable all emotes.
 
+## FAQ
+
+### What is the "Populating Menu" message?
+
+This comes from the [LethalCompanyVariables](https://thunderstore.io/c/lethal-company/p/AMRV/LethalCompanyVariables/) mod. As far as I can tell, you only need to wait fot this to finish if you're hosting a new save. Otherwise the settings you picked were baked into the save file.
+
 ## Links
 
 - [Thunderstore Modpack](https://thunderstore.io/c/lethal-company/p/joshhsoj1902/Agent_Modpack/)
