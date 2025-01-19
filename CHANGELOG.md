@@ -6,11 +6,12 @@ Made various improvements to the modpack after playing with it for 4+ hours.
 
 ### BREAKING CHANGES
 
-Removed `Dio93-DuckMod` mod. The Ducks were super buggy often not rendering their models while still picking up scrap. We found them to be more annoying then. All players will need to remove the mod (I don't think I can force that via a modpack update).
+- Removed `Dio93-DuckMod` mod. The Ducks were super buggy often not rendering their models while still picking up scrap. We found them to be more annoying then. All players will need to remove the mod (I don't think I can force that via a modpack update).
 
 ### Additions
 
-`AMRV-LethalCompanyVariables` was added to simplify balancing scrap values. I don't love this mod but it's the best option I could find.
+- `AMRV-LethalCompanyVariables` was added to simplify balancing scrap values. I don't love this mod but it's the best option I could find.
+- `mattymatty-AsyncLoggers` Seemed like a good idea to add.
 
 ### Other Changes
 
