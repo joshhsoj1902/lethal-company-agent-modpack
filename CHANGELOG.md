@@ -12,6 +12,9 @@ Removed `Dio93-DuckMod` mod. The Ducks were super buggy often not rendering thei
 
 `AMRV-LethalCompanyVariables` was added to simplify balancing scrap values. I don't love this mod but it's the best option I could find.
 
+### Other Changes
+
+Better balance the sell value of outdoor easy to kill monsters.
 
 ## 0.6.0
 
