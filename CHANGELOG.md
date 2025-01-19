@@ -14,7 +14,8 @@ Removed `Dio93-DuckMod` mod. The Ducks were super buggy often not rendering thei
 
 ### Other Changes
 
-Better balance the sell value of outdoor easy to kill monsters.
+- Better balance the sell value of outdoor easy to kill monsters.
+- Disable monsters being able to move inside/outside. The AI didn't seem to work for everything.
 
 ## 0.6.0
 
