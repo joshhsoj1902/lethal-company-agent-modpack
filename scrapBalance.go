@@ -23,6 +23,8 @@ type ItemConfig struct {
 	ShopPrice      string
 	TwoHanded      bool
 	CarryEffect    string
+	IsShop         bool
+	IsBody         bool
 	Raw            []string
 	MinWeightRatio float32
 	MaxWeightRatio float32
@@ -165,6 +167,7 @@ func parseAgentConfig() RebuiltConfig {
 				itemConfig.Battery = minValue
 			case "shop-price":
 				itemConfig.ShopPrice = minValue
+				itemConfig.IsShop = true
 			default:
 				fmt.Printf("Line: %s\n", line)
 				fmt.Printf("Unknown category: %s\n", category)
@@ -202,7 +205,7 @@ func parseScrapHardcoded(rebuiltConfig RebuiltConfig) RebuiltConfig {
 		}
 
 		parts := strings.Split(line, "|")
-		if len(parts) != 4 {
+		if len(parts) != 5 {
 			fmt.Printf("Invalid line format in scrapHardcoded.data: %s\n", line)
 			continue
 		}
@@ -219,7 +222,7 @@ func parseScrapHardcoded(rebuiltConfig RebuiltConfig) RebuiltConfig {
 		// Update two-handed and carry effect
 		itemConfig.TwoHanded = strings.TrimSpace(parts[1]) == "true"
 		itemConfig.CarryEffect = strings.TrimSpace(parts[2])
-		// fmt.Printf("Parts: %+v\n", parts)
+		itemConfig.IsBody = strings.TrimSpace(parts[4]) == "true"
 
 		rebuiltConfig.Items[name] = itemConfig
 	}
@@ -269,29 +272,115 @@ func main() {
 	rebuiltConfig = calculateWeightRatios(rebuiltConfig)
 	rebuiltConfig = calculateRarity(rebuiltConfig, "all")
 
-	// Sort items by MinWeightRatio
-	sortedItems := make([]ItemConfig, 0, len(rebuiltConfig.Items))
-	filteredItems := make([]ItemConfig, 0, len(rebuiltConfig.Items))
+	printTables(rebuiltConfig)
+}
+
+func printTables(rebuiltConfig RebuiltConfig) {
+	items := make([]ItemConfig, 0, len(rebuiltConfig.Items))
+	// Convert to array
 	for _, itemConfig := range rebuiltConfig.Items {
-		// Filter out items
-		if itemConfig.Weight == 0 || itemConfig.ScrapValueMin == 0 || itemConfig.ScrapValueMax == 0 {
-			filteredItems = append(filteredItems, itemConfig)
-		} else {
-			sortedItems = append(sortedItems, itemConfig)
-		}
+		items = append(items, itemConfig)
 	}
-	sort.Slice(sortedItems, func(i, j int) bool {
-		return sortedItems[i].MinWeightRatio < sortedItems[j].MaxWeightRatio
+	sort.Slice(items, func(i, j int) bool {
+		return items[i].MinWeightRatio < items[j].MaxWeightRatio
 	})
 
-	////////////////////
-	// Print Scrap Table
-	////////////////////
+	// Shop Items
+	items, filteredOutItems := filterOutShopItems(items)
+	fmt.Println("=========")
+	fmt.Println("Shop Items")
+	fmt.Println("=========")
+	printAll(filteredOutItems)
+	fmt.Printf("\n\n\n\n")
 
+	// Body Items
+	items, filteredOutItems = filterOutBodyItems(items)
+	fmt.Println("=========")
+	fmt.Println("Body Items")
+	fmt.Println("=========")
+	printAll(filteredOutItems)
+	fmt.Printf("\n\n\n\n")
+
+	// Weightless Items
+	items, filteredOutItems = filterOutWeightlessItems(items)
+	fmt.Println("=========")
+	fmt.Println("Weightless Items")
+	fmt.Println("=========")
+	printAll(filteredOutItems)
+	fmt.Printf("\n\n\n\n")
+
+	// Missing Scrap Values
+	items, filteredOutItems = filterOutMissingScrapValues(items)
+	fmt.Println("=========")
+	fmt.Println("Missing Scrap Values")
+	fmt.Println("=========")
+	printAll(filteredOutItems)
+	fmt.Printf("\n\n\n\n")
+
+	fmt.Println("=========")
+	fmt.Println("All Items")
+	fmt.Println("=========")
+	printAll(items)
+
+}
+
+func filterOutShopItems(items []ItemConfig) (filteredItems []ItemConfig, filteredOutItems []ItemConfig) {
+	filteredItems = make([]ItemConfig, 0, len(items))
+	filteredOutItems = make([]ItemConfig, 0, len(items))
+	for _, itemConfig := range items {
+		if !itemConfig.IsShop {
+			filteredItems = append(filteredItems, itemConfig)
+		} else {
+			filteredOutItems = append(filteredOutItems, itemConfig)
+		}
+	}
+	return filteredItems, filteredOutItems
+}
+
+func filterOutWeightlessItems(items []ItemConfig) (filteredItems []ItemConfig, filteredOutItems []ItemConfig) {
+	filteredItems = make([]ItemConfig, 0, len(items))
+	filteredOutItems = make([]ItemConfig, 0, len(items))
+	for _, itemConfig := range items {
+		if itemConfig.Weight == 0 {
+			filteredOutItems = append(filteredOutItems, itemConfig)
+		} else {
+			filteredItems = append(filteredItems, itemConfig)
+		}
+	}
+	return filteredItems, filteredOutItems
+}
+
+func filterOutMissingScrapValues(items []ItemConfig) (filteredItems []ItemConfig, filteredOutItems []ItemConfig) {
+	filteredItems = make([]ItemConfig, 0, len(items))
+	filteredOutItems = make([]ItemConfig, 0, len(items))
+	for _, itemConfig := range items {
+		if itemConfig.ScrapValueMin == 0 || itemConfig.ScrapValueMax == 0 {
+			filteredOutItems = append(filteredOutItems, itemConfig)
+		} else {
+			filteredItems = append(filteredItems, itemConfig)
+		}
+	}
+	return filteredItems, filteredOutItems
+}
+
+func filterOutBodyItems(items []ItemConfig) (filteredItems []ItemConfig, filteredOutItems []ItemConfig) {
+	filteredItems = make([]ItemConfig, 0, len(items))
+	filteredOutItems = make([]ItemConfig, 0, len(items))
+	for _, itemConfig := range items {
+		if itemConfig.IsBody {
+			filteredOutItems = append(filteredOutItems, itemConfig)
+		} else {
+			filteredItems = append(filteredItems, itemConfig)
+		}
+	}
+	return filteredItems, filteredOutItems
+}
+
+func printAll(items []ItemConfig) {
 	w := tabwriter.NewWriter(os.Stdout, 15, 1, 1, ' ', 0)
 	fmt.Fprintln(w, "Name\tScrapMin\tScrapMax\tWeight\tTwoHanded\tCarryEffect\tMetal\tRarity\tMinWeightRatio\tMaxWeightRatio")
 
-	for _, itemConfig := range sortedItems {
+	for _, itemConfig := range items {
 		fmt.Fprintf(w, "%s\t%.2f\t%.2f\t%.2f\t%v\t%s\t%v\t%.2f\t%.2f\t%.2f\n",
 			itemConfig.Name,
 			itemConfig.ScrapValueMin,
@@ -306,5 +395,4 @@ func main() {
 	}
 
 	w.Flush()
-
 }

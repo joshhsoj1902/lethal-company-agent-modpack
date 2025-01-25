@@ -30,6 +30,10 @@ jobs:
         run: |
           tcli build --package-version ${{ inputs.ref }}
 
+      - name: Scrap Values
+        run: |
+          go run ./scrapBalance.go
+
       - name: Publish
         env:
           TCLI_AUTH_TOKEN: ${{ secrets.THUNDERSTORE_API_KEY }}
