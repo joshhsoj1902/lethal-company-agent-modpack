@@ -1,5 +1,23 @@
 # Changelog
 
+## 0.7.0
+
+Made various improvements to the modpack after playing with it for 4+ hours.
+
+### BREAKING CHANGES
+
+- Removed `Dio93-DuckMod` mod. The Ducks were super buggy often not rendering their models while still picking up scrap. We found them to be more annoying then. All players will need to remove the mod (I don't think I can force that via a modpack update).
+- Removed `ohotdog-LootableMusicTapes` mod. The weights are improperly configured for this mod resulting in players gaining 100 weight when they drop a tape. Unfortunately I can't find the source for this mod anywhere so I can't easily fix it. All players will need to remove the mod (I don't think I can force that via a modpack update).
+
+### Additions
+
+- `mattymatty-AsyncLoggers` Seemed like a good idea to add.
+
+### Other Changes
+
+- Better balance the sell value of outdoor easy to kill monsters.
+- Disable monsters being able to move inside/outside. The AI didn't seem to work for everything.
+
 ## 0.6.0
 
 Added the github actions config to automate building & publishing releases.
