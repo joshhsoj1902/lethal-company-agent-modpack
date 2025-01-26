@@ -13,22 +13,25 @@ import (
 )
 
 type ItemConfig struct {
-	Name           string
-	MoonRarity     map[string]int
-	ScrapValueMin  float32
-	ScrapValueMax  float32
-	IsMetal        bool
-	Weight         float32
-	Battery        string
-	ShopPrice      string
-	TwoHanded      bool
-	CarryEffect    string
-	IsShop         bool
-	IsBody         bool
-	Raw            []string
-	MinWeightRatio float32
-	MaxWeightRatio float32
-	ComputedRarity float32
+	Name                 string
+	MoonRarity           map[string]int
+	ScrapValueMin        float32
+	ScrapValueMax        float32
+	IsMetal              bool
+	Weight               float32
+	Battery              string
+	ShopPrice            string
+	TwoHanded            bool
+	CarryEffect          string
+	IsShop               bool
+	IsBody               bool
+	Raw                  []string
+	MinWeightRatio       float32
+	MaxWeightRatio       float32
+	MinWeightRarityRatio float32
+	MaxWeightRarityRatio float32
+	ComputedRarity       float32
+	ComputedRarityRatio  float32
 }
 
 type RebuiltConfig struct {
@@ -238,6 +241,10 @@ func calculateWeightRatios(rebuiltConfig RebuiltConfig) RebuiltConfig {
 	for _, itemConfig := range rebuiltConfig.Items {
 		itemConfig.MinWeightRatio = itemConfig.ScrapValueMin / itemConfig.Weight
 		itemConfig.MaxWeightRatio = itemConfig.ScrapValueMax / itemConfig.Weight
+
+		itemConfig.MinWeightRarityRatio = itemConfig.MinWeightRatio * itemConfig.ComputedRarityRatio
+		itemConfig.MaxWeightRarityRatio = itemConfig.MaxWeightRatio * itemConfig.ComputedRarityRatio
+
 		rebuiltConfig.Items[itemConfig.Name] = itemConfig
 	}
 
@@ -245,19 +252,33 @@ func calculateWeightRatios(rebuiltConfig RebuiltConfig) RebuiltConfig {
 }
 
 func calculateRarity(rebuiltConfig RebuiltConfig, moon string) RebuiltConfig {
+	var totalRarity float32 = 0
 	for _, itemConfig := range rebuiltConfig.Items {
 		rarity := 0
 		count := 0
 		for _, moonRarity := range itemConfig.MoonRarity {
-			if moon == "all" {
-				rarity += moonRarity
-				count++
-			} else if moon == "moon" {
-				rarity += moonRarity
-				count++
+			if moonRarity != 0 {
+				if moon == "all" {
+					rarity += moonRarity
+					count++
+				} else if moon == "moon" {
+					rarity += moonRarity
+					count++
+				}
 			}
 		}
-		itemConfig.ComputedRarity = float32(rarity) / float32(count)
+		if count > 0 {
+			itemConfig.ComputedRarity = float32(rarity) / float32(count)
+		} else {
+			itemConfig.ComputedRarity = 0
+		}
+		totalRarity += itemConfig.ComputedRarity
+		rebuiltConfig.Items[itemConfig.Name] = itemConfig
+	}
+	fmt.Printf("Total Rarity: %.2f\n", totalRarity)
+	for _, itemConfig := range rebuiltConfig.Items {
+		itemConfig.ComputedRarityRatio = itemConfig.ComputedRarity / float32(totalRarity)
+		fmt.Printf("Computed Rarity Ratio: %f\n", itemConfig.ComputedRarityRatio)
 		rebuiltConfig.Items[itemConfig.Name] = itemConfig
 	}
 
@@ -269,8 +290,8 @@ func main() {
 
 	rebuiltConfig = parseScrapHardcoded(rebuiltConfig)
 
-	rebuiltConfig = calculateWeightRatios(rebuiltConfig)
 	rebuiltConfig = calculateRarity(rebuiltConfig, "all")
+	rebuiltConfig = calculateWeightRatios(rebuiltConfig)
 
 	printTables(rebuiltConfig)
 }
@@ -282,13 +303,21 @@ func printTables(rebuiltConfig RebuiltConfig) {
 		items = append(items, itemConfig)
 	}
 	sort.Slice(items, func(i, j int) bool {
-		return items[i].MinWeightRatio < items[j].MaxWeightRatio
+		return items[i].MaxWeightRarityRatio < items[j].MaxWeightRarityRatio
 	})
 
 	// Shop Items
 	items, filteredOutItems := filterOutShopItems(items)
 	fmt.Println("=========")
 	fmt.Println("Shop Items")
+	fmt.Println("=========")
+	printAll(filteredOutItems)
+	fmt.Printf("\n\n\n\n")
+
+	// LCGoldScrapMod Items
+	items, filteredOutItems = filterOutLCGoldScrapModItems(items)
+	fmt.Println("=========")
+	fmt.Println("LCGoldScrapMod Items")
 	fmt.Println("=========")
 	printAll(filteredOutItems)
 	fmt.Printf("\n\n\n\n")
@@ -309,6 +338,14 @@ func printTables(rebuiltConfig RebuiltConfig) {
 	printAll(filteredOutItems)
 	fmt.Printf("\n\n\n\n")
 
+	// Missing Rarity
+	items, filteredOutItems = filterOutMissingRarity(items)
+	fmt.Println("=========")
+	fmt.Println("Missing Rarity")
+	fmt.Println("=========")
+	printAll(filteredOutItems)
+	fmt.Printf("\n\n\n\n")
+
 	// Missing Scrap Values
 	items, filteredOutItems = filterOutMissingScrapValues(items)
 	fmt.Println("=========")
@@ -322,6 +359,20 @@ func printTables(rebuiltConfig RebuiltConfig) {
 	fmt.Println("=========")
 	printAll(items)
 
+}
+
+// The LCGoldScrapMod already balances really well
+func filterOutLCGoldScrapModItems(items []ItemConfig) (filteredItems []ItemConfig, filteredOutItems []ItemConfig) {
+	filteredItems = make([]ItemConfig, 0, len(items))
+	filteredOutItems = make([]ItemConfig, 0, len(items))
+	for _, itemConfig := range items {
+		if strings.Contains(itemConfig.Name, "LCGoldScrapMod") {
+			filteredOutItems = append(filteredOutItems, itemConfig)
+		} else {
+			filteredItems = append(filteredItems, itemConfig)
+		}
+	}
+	return filteredItems, filteredOutItems
 }
 
 func filterOutShopItems(items []ItemConfig) (filteredItems []ItemConfig, filteredOutItems []ItemConfig) {
@@ -376,12 +427,25 @@ func filterOutBodyItems(items []ItemConfig) (filteredItems []ItemConfig, filtere
 	return filteredItems, filteredOutItems
 }
 
+func filterOutMissingRarity(items []ItemConfig) (filteredItems []ItemConfig, filteredOutItems []ItemConfig) {
+	filteredItems = make([]ItemConfig, 0, len(items))
+	filteredOutItems = make([]ItemConfig, 0, len(items))
+	for _, itemConfig := range items {
+		if itemConfig.ComputedRarity == 0 {
+			filteredOutItems = append(filteredOutItems, itemConfig)
+		} else {
+			filteredItems = append(filteredItems, itemConfig)
+		}
+	}
+	return filteredItems, filteredOutItems
+}
+
 func printAll(items []ItemConfig) {
 	w := tabwriter.NewWriter(os.Stdout, 15, 1, 1, ' ', 0)
-	fmt.Fprintln(w, "Name\tScrapMin\tScrapMax\tWeight\tTwoHanded\tCarryEffect\tMetal\tRarity\tMinWeightRatio\tMaxWeightRatio")
+	fmt.Fprintln(w, "Name\tScrapMin\tScrapMax\tWeight\tTwoHanded\tCarryEffect\tMetal\tRarity\tRarityRatio\tMinWeightRatio\tMaxWeightRatio\tMinWeightRarityRatio\tMaxWeightRarityRatio")
 
 	for _, itemConfig := range items {
-		fmt.Fprintf(w, "%s\t%.2f\t%.2f\t%.2f\t%v\t%s\t%v\t%.2f\t%.2f\t%.2f\n",
+		fmt.Fprintf(w, "%s\t%.2f\t%.2f\t%.2f\t%v\t%s\t%v\t%.2f\t%.2f\t%.2f\t%.2f\t%.2f\t%.2f\n",
 			itemConfig.Name,
 			itemConfig.ScrapValueMin,
 			itemConfig.ScrapValueMax,
@@ -390,8 +454,11 @@ func printAll(items []ItemConfig) {
 			itemConfig.CarryEffect,
 			itemConfig.IsMetal,
 			itemConfig.ComputedRarity,
+			itemConfig.ComputedRarityRatio,
 			itemConfig.MinWeightRatio,
-			itemConfig.MaxWeightRatio)
+			itemConfig.MaxWeightRatio,
+			itemConfig.MinWeightRarityRatio,
+			itemConfig.MaxWeightRarityRatio)
 	}
 
 	w.Flush()

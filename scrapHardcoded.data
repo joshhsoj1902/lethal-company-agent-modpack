@@ -1,4 +1,4 @@
-Name                             |TwoHanded|Effect|EffectDescription|isBody
+Name                             |TwoHanded|Effect|EffectDescription|isBody|
 6pin_cable                       |unknown|unknown|N/A|false
 6pin_cable_item                  |unknown|unknown|N/A|false
 7Ball                            |unknown|unknown|N/A|false
@@ -196,14 +196,14 @@ giant_chocolate_bar              |unknown|unknown|N/A|false
 giant_gummy                      |unknown|unknown|N/A|false
 giant_gummy_bear                 |unknown|unknown|N/A|false
 giantgarlic                      |unknown|unknown|N/A|false
-GiftBox                          |unknown|unknown|N/A|false
+GiftBox                          |false|Good|Can be opened to get a random item|false
 GirlBody                         |false|none|N/A|true
 GloomyCapsule                    |unknown|unknown|N/A|false
 GloomyCapsule_Item               |unknown|unknown|N/A|false
 glowstickItem(Dropped)           |unknown|unknown|N/A|false
 GnomeItem                        |unknown|unknown|N/A|false
 GoldAxleLCGoldScrapMod           |unknown|unknown|N/A|false
-GoldBar                          |unknown|unknown|N/A|false
+GoldBar                          |false|none|N/A|false
 GoldBeaconLCGoldScrapMod         |unknown|unknown|N/A|false
 GoldBirdLCGoldScrapMod           |unknown|unknown|N/A|false
 GoldBoltLCGoldScrapMod           |unknown|unknown|N/A|false
@@ -461,6 +461,6 @@ wire_spool                       |unknown|unknown|N/A|false
 wire_spool_item                  |unknown|unknown|N/A|false
 wolf                             |unknown|unknown|N/A|false
 WrenchItem                       |unknown|unknown|N/A|false
-YieldSign                        |unknown|unknown|N/A|false
+YieldSign                        |false|good|Is a Weapon|false
 ZapGun                           |unknown|unknown|N/A|false
 Zeddog                           |unknown|unknown|N/A|false
