@@ -1,6 +1,12 @@
-# lethal-company-agent-modpack
+# Agent Modpack
+
+[![GitHub Build Status](https://img.shields.io/github/actions/workflow/status/joshhsoj1902/lethal-company-agent-modpack/build.yml?style=for-the-badge&logo=github)](https://github.com/joshhsoj1902/lethal-company-agent-modpack/actions/workflows/build.yml)
+[![Thunderstore Version](https://img.shields.io/thunderstore/v/joshhsoj1902/Agent_Modpack?style=for-the-badge&logo=thunderstore&logoColor=white)](https://thunderstore.io/c/lethal-company/p/joshhsoj1902/Agent_Modpack/)
+[![Thunderstore Downloads](https://img.shields.io/thunderstore/dt/joshhsoj1902/Agent_Modpack?style=for-the-badge&logo=thunderstore&logoColor=white)](https://thunderstore.io/c/lethal-company/p/joshhsoj1902/Agent_Modpack/)
 
 A modpack created for the Agents.
+
+## Description
 
 This modpack is meant to be a Vanilla+ experience, targeted toward non-serious 4+ player multiplayer games. It includes many of the most popular mods with a focus on adding new Scrap, Monsters selective shop items which don't feel too overpowered. There are also a lot of QoL mods to make the game more enjoyable (but also easier in some cases).
 
