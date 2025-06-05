@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.8.0
+
+Updates for V70/V71
+
+Some packages were removed, see BREAKING CHANGES below.
+
+I've lightly tested this at this point, if you run into any issues please open an issue on the github repository.
+
+### BREAKING CHANGES
+
+I can't force remove mods, so these mods need to be manually removed if players used an older version of this modpack.
+
+- Removed `zealsprince-Locker` mod. My group did not find it very fun.
+
 ## 0.7.0
 
 Made various improvements to the modpack after playing with it for 4+ hours.
