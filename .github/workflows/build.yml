@@ -30,10 +30,10 @@ jobs:
         run: |
           tcli build --package-version ${{ inputs.ref }}
 
-      # - name: Publish
-      #   env:
-      #     TCLI_AUTH_TOKEN: ${{ secrets.THUNDERSTORE_API_KEY }}
-      #   run: tcli publish --package-version "0.5.20" --package-name Agent_Modpack_TESTING2
+      - name: Publish
+        env:
+          TCLI_AUTH_TOKEN: ${{ secrets.THUNDERSTORE_API_KEY }}
+        run: tcli publish --package-version "0.5.20" --package-name Agent_Modpack_TESTING2
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
