@@ -24,7 +24,7 @@ jobs:
       - name: Publish
         env:
           TCLI_AUTH_TOKEN: ${{ secrets.THUNDERSTORE_API_KEY }}
-        run: tcli publish --package-version ${{ github.event.release.tag_name }}
+        run: tcli publish --package-name Agent_Modpack --package-version ${{ github.event.release.tag_name }}
 
       - name: Upload artifacts to Release
         env:

@@ -13,7 +13,6 @@ jobs:
       - name: Fetch Sources
         uses: actions/checkout@v4
         with:
-          ref: ${{ inputs.ref }}
           fetch-depth: 0
           filter: tree:0
 
@@ -28,12 +27,16 @@ jobs:
 
       - name: Build
         run: |
-          tcli build --package-version ${{ inputs.ref }}
+          tcli build --package-version "0.0.${{ github.run_number }}"
 
-      # - name: Publish
-      #   env:
-      #     TCLI_AUTH_TOKEN: ${{ secrets.THUNDERSTORE_API_KEY }}
-      #   run: tcli publish --package-version "0.8.2" --package-name Agent_Modpack_TESTING2
+      - name: Publish to Thunderstore (dev)
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        env:
+          TCLI_AUTH_TOKEN: ${{ secrets.THUNDERSTORE_API_KEY }}
+        run: |
+          sed 's/name = "Agent_Modpack"/name = "Agent_Modpack_TESTING"/' thunderstore.toml > thunderstore.testing.toml
+          sed -i 's|readme = "README.md"|readme = "README_TESTING.md"|' thunderstore.testing.toml
+          tcli publish --config-path thunderstore.testing.toml --package-version "0.0.${{ github.run_number }}"
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
@@ -41,4 +44,3 @@ jobs:
           name: thunderstore
           path: ./dist/*
           retention-days: 7
-
