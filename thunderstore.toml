@@ -32,36 +32,36 @@ categories = ["modpacks"]
 ###################
 ## Shared libraries
 ###################
-BepInEx-BepInExPack = "5.4.2100"
+BepInEx-BepInExPack = "5.4.2305"
 AinaVT-LethalConfig = "1.4.6"
-Rune580-LethalCompany_InputUtils = "0.7.10"
+Rune580-LethalCompany_InputUtils = "0.7.13"
 Evaisa-HookGenPatcher = "0.0.5"
-Evaisa-LethalLib = "1.1.0"
-Evaisa-FixPluginTypesSerialization = "1.1.2"
+Evaisa-LethalLib = "1.2.0"
+Evaisa-FixPluginTypesSerialization = "1.1.4"
 MaxWasUnavailable-LethalModDataLib = "1.2.2"
-IAmBatby-LethalLevelLoader = "1.4.11"
+IAmBatby-LethalLevelLoader = "1.6.9"
 Ozone-Runtime_Netcode_Patcher = "0.2.5"
 Hardy-LCMaxSoundsFix = "1.2.0"
-mrov-MrovLib = "0.2.27"
+mrov-MrovLib = "0.4.3"
 Bobbie-FixRPCLag = "1.0.1"
 linkoid-DissonanceLagFix = "1.0.0"
-xilophor-StaticNetcodeLib = "1.1.1"
+xilophor-StaticNetcodeLib = "1.2.0"
 Kittenji-NavMeshInCompany = "1.0.3"
-NotAtomicBomb-TerminalApi = "1.5.5"
+NotAtomicBomb-TerminalApi = "1.5.6"
 
 #############################
 ## Essential Multiplayer Mods
 #############################
-notnotnotswipez-MoreCompany = "1.11.1"
+notnotnotswipez-MoreCompany = "1.14.0"
 anormaltwig-LateCompany = "1.0.18"
-ShaosilGaming-GeneralImprovements = "1.4.11"
-KlutzyBubbles-BetterEmotes = "1.5.4"
-FlipMods-TooManyEmotes = "2.3.4"
+ShaosilGaming-GeneralImprovements = "1.5.5"
+KlutzyBubbles-BetterEmotes = "1.5.8"
+FlipMods-TooManyEmotes = "2.3.16"
 
 ## Suits
 Hexnet111-SuitSaver = "1.2.1"
 x753-More_Suits = "1.5.2"
-Verity-TooManySuits = "2.0.1"
+Verity-TooManySuits = "2.0.3"
 GhostbustingTrio-CustomFunSuits = "1.8.3"
 kidcudilovers-CudisRealisticSuits = "1.0.0"
 404_Dom-Doms_Basic_Suit_Colors = "1.4.4"
@@ -70,28 +70,28 @@ kidcudilovers-CudisRealisticSuits = "1.0.0"
 ## QoL Mods
 ###########
 dummy-LetTheDeadRest = "1.0.2"
-FlipMods-ReservedItemSlotCore = "2.0.49"
+FlipMods-ReservedItemSlotCore = "2.0.55"
 FlipMods-ReservedFlashlightSlot = "2.0.10"
 FlipMods-ReservedWalkieSlot = "2.0.7"
 FlipMods-ReservedSprayPaintSlot = "1.1.3"
-EliteMasterEric-Coroner = "2.2.0"
-taffyko-BetterSprayPaint = "2.0.9"
+EliteMasterEric-Coroner = "2.4.1"
+taffyko-BetterSprayPaint = "2.1.0"
 Suskitech-AlwaysHearActiveWalkies = "1.4.5"
 Monkeytype-HideChat = "1.0.0"
 tinyhoot-ShipLoot = "1.1.0"
 FutureSavior-Hold_Scan_Button = "1.1.2"
 Spyci-CozyImprovements = "1.2.2"
-mrov-TerminalFormatter = "0.2.29"
+mrov-TerminalFormatter = "0.2.35"
 red_eye-LethalAutocomplete = "0.4.5"
 ViViKo-SpectateDeathCause = "1.0.0"
-MrHydralisk-MajorityVote = "1.1.0"
+MrHydralisk-MajorityVote = "1.1.3"
 
 #############################
 ## Tweaking base game content
 #############################
 TwinDimensionalProductions-CoilHeadStare = "1.1.0"
 sunnobunno-YippeeMod = "1.2.4"
-qwbarch-Mirage = "1.25.1"
+qwbarch-Mirage = "1.29.1"
 qwbarch-MirageCore = "1.0.4"
 mattplays-HoarderBugUseItems = "1.0.3"
 # Dogs are immune to shotguns in the base game.
@@ -101,8 +101,8 @@ TheFluff-FairAI = "1.5.7"
 ## Sound changes
 no00ob-LCSoundTool = "1.5.1"
 Clementinise-CustomSounds = "2.3.2"
-loaforc-loaforcsSoundAPI = "2.0.6"
-ButteryStancakes-EnemySoundFixes = "1.8.0"
+loaforc-loaforcsSoundAPI = "2.0.11"
+ButteryStancakes-EnemySoundFixes = "1.9.10"
 LethalResonance-LETHALRESONANCE = "4.7.8"
 Sk737-JesterSymphony = "1.2.0"
 
@@ -111,14 +111,14 @@ Sk737-JesterSymphony = "1.2.0"
 #################################
 
 ## New scrap (and sometimes a couple store items)
-Jordo-NeedyCats = "1.2.3"
-slayer6409-Emergency_Dice_Updated = "1.9.27"
-SimonTendo-LCGoldScrapMod = "2.2.3"
+Jordo-NeedyCats = "1.2.5"
+slayer6409-Emergency_Dice_Updated = "1.14.1"
+SimonTendo-LCGoldScrapMod = "2.2.7"
 XuXiaolan-ImmersiveScrap = "1.4.2"
 Sconeys-abandonedcompanyassets = "0.15.79"
 ohotdog-LootableMusicTapes = "1.0.1"
 bigmcnugget-VanillaContentExpansion = "0.1.8"
-etherealemil-UsualScrap = "1.7.8"
+etherealemil-UsualScrap = "1.9.8"
 Caigan-Tokucade_Scrap = "1.7.0"
 # depends on deprecated package
 # czech_lethal-AlltheScrapsMod = "1.1.7"
@@ -126,35 +126,35 @@ Caigan-Tokucade_Scrap = "1.7.0"
 # Pikmanfan2002-PikminScrap = "2.0.0"
 # depends on deprecated package
 # ViViKo-AllTheScrap = "1.0.1"
-FlipMods-TooManyEmotesScrap = "1.0.8"
+FlipMods-TooManyEmotesScrap = "1.1.0"
 
 # New Store Items
 Mellowdy-LightningRod = "1.0.5"
-Zaggy1024-OpenBodyCams = "3.0.6"
+Zaggy1024-OpenBodyCams = "3.0.12"
 
 # New creatures
-x753-Peepers = "1.0.3"
-Kittenji-Football = "1.1.12"
+x753-Peepers = "1.0.5"
+Kittenji-Football = "1.1.14"
 Sconeys-Gnomes = "2.1.21"
-Kittenji-Herobrine = "1.3.6"
-XuXiaolan-PjonkGoose = "2.0.0"
+Kittenji-Herobrine = "1.3.9"
+XuXiaolan-PjonkGoose = "2.0.1"
 # broken on latest game versions; deprecated on Thunderstore
 # Garf-MissileTurrets = "1.3.5"
 
 # New features
-Entity378-SellBodiesFixed = "1.12.1"
-mrgrm7-LethalCasino = "1.1.2"
+Entity378-SellBodiesFixed = "1.14.0"
+mrgrm7-LethalCasino = "1.1.3"
 
 #######################
 # New dungeons & moons
 #######################
-theMenagerie-LiminalPools = "1.0.14"
+theMenagerie-LiminalPools = "1.0.16"
 MrUnrealTeam-SchoolDungeon = "1.3.1"
-AudioKnight-StarlancerEnemyEscape = "2.5.7"
+AudioKnight-StarlancerEnemyEscape = "3.0.0"
 AudioKnight-StarlancerWarehouse = "1.7.0"
-AudioKnight-StarlancerAIFix = "3.10.0"
+AudioKnight-StarlancerAIFix = "3.13.1"
 AudioKnight-StarlancerMusic = "1.3.2"
-AudioKnight-StarlancerMoons = "3.1.1"
+AudioKnight-StarlancerMoons = "3.2.0"
 AudioKnight-Starlancer = "2.0.0"
 
 ##############################
@@ -164,8 +164,8 @@ Sligili-HDLethalCompany = "1.5.6"
 FlipMods-MoreBlood = "1.0.3"
 sfDesat-ViewExtension = "1.3.0"
 Confusified-InsanityDisplay = "1.3.3"
-fumiko-CullFactory = "1.7.0"
-mattymatty-AsyncLoggers = "2.1.4"
+fumiko-CullFactory = "2.0.8"
+mattymatty-AsyncLoggers = "2.2.3"
 
 #######
 # Misc
