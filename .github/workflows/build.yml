@@ -27,7 +27,7 @@ jobs:
 
       - name: Build
         run: |
-          tcli build --package-version "0.0.${{ github.run_number }}"
+          tcli build --package-version "1.0.${{ github.run_number }}"
 
       - name: Publish to Thunderstore (dev)
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
@@ -36,7 +36,7 @@ jobs:
         run: |
           sed 's/name = "Agent_Modpack"/name = "Agent_Modpack_TESTING"/' thunderstore.toml > thunderstore.testing.toml
           sed -i 's|readme = "README.md"|readme = "README_TESTING.md"|' thunderstore.testing.toml
-          tcli publish --config-path thunderstore.testing.toml --package-version "0.0.${{ github.run_number }}"
+          tcli publish --config-path thunderstore.testing.toml --package-version "1.0.${{ github.run_number }}"
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
