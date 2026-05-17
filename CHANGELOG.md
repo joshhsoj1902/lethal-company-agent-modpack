@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.9.0
+
+V81 updates
+
+- Removed `x753-Mimics`, These were not very fun
+- Removed `Garf-MissileTurrets`. Broken on latest game versions; the [Thunderstore package](https://thunderstore.io/c/lethal-company/p/Garf/MissileTurrets/) is also marked deprecated.
+- Replaced `Sakura-LandminesForAll` with `TheFluff-FairAI`. [LandminesForAll](https://thunderstore.io/c/lethal-company/p/Sakura/LandminesForAll/) is deprecated; [FairAI](https://thunderstore.io/c/lethal-company/p/TheFluff/FairAI/) covers landmines (and turrets targeting enemies) with config options.
+
 ## 0.8.0
 
 Updates for V70/V71

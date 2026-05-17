@@ -70,7 +70,7 @@ None of these are huge changes and generally could mostly be part of the base ga
 - [New Monster Behaviors - 1](https://thunderstore.io/c/lethal-company/p/TwinDimensionalProductions/CoilHeadStare/)
 - [New Monster Behaviors - 2](https://thunderstore.io/c/lethal-company/p/sunnobunno/YippeeMod/)
 - [New Monster Behaviors - 3](https://thunderstore.io/c/lethal-company/p/mattplays/HoarderBugUseItems/)
-- [New Monster Behaviors - 4](https://thunderstore.io/c/lethal-company/p/Sakura/LandminesForAll/)
+- [New Monster Behaviors - 4](https://thunderstore.io/c/lethal-company/p/TheFluff/FairAI/)
 - [New Monster Behaviors - 5](https://thunderstore.io/c/lethal-company/p/Sk737/JesterSymphony/)
 
 #### New Scrap
@@ -105,7 +105,6 @@ Some of these scrap items have fun behaviors. Some of these mods also add store 
 - [Monster 4](https://thunderstore.io/c/lethal-company/p/Sconeys/Gnomes/)
 - [Monster 5](https://thunderstore.io/c/lethal-company/p/Kittenji/Herobrine/)
 - [Monster 6](https://thunderstore.io/c/lethal-company/p/XuXiaolan/PjonkGoose/)
-- [Monster 7](https://thunderstore.io/c/lethal-company/p/Garf/MissileTurrets/)
 - [Monster 8](https://thunderstore.io/c/lethal-company/p/x753/Mimics/)
 
 #### New Moons & Dongeons
