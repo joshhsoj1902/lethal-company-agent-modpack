@@ -8,6 +8,29 @@ V81 updates
 - Removed `Garf-MissileTurrets`. Broken on latest game versions; the [Thunderstore package](https://thunderstore.io/c/lethal-company/p/Garf/MissileTurrets/) is also marked deprecated.
 - Replaced `Sakura-LandminesForAll` with `TheFluff-FairAI`. [LandminesForAll](https://thunderstore.io/c/lethal-company/p/Sakura/LandminesForAll/) is deprecated; [FairAI](https://thunderstore.io/c/lethal-company/p/TheFluff/FairAI/) covers landmines (and turrets targeting enemies) with config options.
 
+### Additions
+
+- `Generic_GMD-Generic_Interiors` — [Storehouse, Drains, and Tower](https://thunderstore.io/c/lethal-company/p/Generic_GMD/Generic_Interiors/) interiors.
+- `Magic_Wesley-WesleysInteriors` — [additional vanilla-friendly interiors](https://thunderstore.io/c/lethal-company/p/Magic_Wesley/WesleysInteriors/) (Toy Store, Grand Armory, Rubber Rooms, and more).
+- `Beaniebe-Storage_Complex` — [vanilla-friendly storage interior](https://thunderstore.io/c/lethal-company/p/Beaniebe/Storage_Complex/).
+- `DemonMae-Dungeons_Ultimately_Lacking_Liveliness` — [bundle of vanilla-oriented interiors](https://thunderstore.io/c/lethal-company/p/DemonMae/Dungeons_Ultimately_Lacking_Liveliness/).
+- `Piggy-LC_Office` — [office-themed interior](https://thunderstore.io/c/lethal-company/p/Piggy/LC_Office/).
+- `ButteryStancakes-MaskFixes` — [mask and masked-enemy fixes](https://thunderstore.io/c/lethal-company/p/ButteryStancakes/MaskFixes/); complements `qwbarch-Mirage` (MaskedInvisFix still comes via Mirage).
+- `ScienceBird-Universal_Radar` — [configurable contour maps for moons](https://thunderstore.io/c/lethal-company/p/ScienceBird/Universal_Radar/).
+- `Electric131-OuijaBoard` — [dead players can communicate via Ouija board](https://thunderstore.io/c/lethal-company/p/Electric131/OuijaBoard/).
+
+### Other changes
+
+- Removed `ohotdog-LootableMusicTapes` from the modpack manifest (was still listed; removed in 0.7.0 due to weight bug). Uninstall manually if upgrading from an older install.
+
+### Test plan (0.9.0)
+
+- [ ] 4+ player lobby on V81: new interiors (Storage Complex, DULL, LC Office) spawn and complete without softlocks.
+- [ ] Masked enemies visible and Mirage voice lines work with MaskFixes enabled.
+- [ ] Universal Radar defaults feel fair (not wallhack-easy).
+- [ ] Ouija board works when players die mid-run.
+- [ ] LC Office loads cleanly alongside `IAmBatby-LethalLevelLoader` (LC Office lists alternate LLL-related deps on Thunderstore).
+
 ## 0.8.0
 
 Updates for V70/V71

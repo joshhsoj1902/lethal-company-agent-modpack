@@ -85,12 +85,14 @@ mrov-TerminalFormatter = "0.2.35"
 red_eye-LethalAutocomplete = "0.4.5"
 ViViKo-SpectateDeathCause = "1.0.0"
 MrHydralisk-MajorityVote = "1.1.3"
+ScienceBird-Universal_Radar = "1.2.4"
 
 #############################
 ## Tweaking base game content
 #############################
 TwinDimensionalProductions-CoilHeadStare = "1.1.0"
 sunnobunno-YippeeMod = "1.2.4"
+ButteryStancakes-MaskFixes = "1.6.2"
 qwbarch-Mirage = "1.29.1"
 qwbarch-MirageCore = "1.0.4"
 mattplays-HoarderBugUseItems = "1.0.3"
@@ -116,7 +118,8 @@ slayer6409-Emergency_Dice_Updated = "1.14.1"
 SimonTendo-LCGoldScrapMod = "2.2.7"
 XuXiaolan-ImmersiveScrap = "1.4.2"
 Sconeys-abandonedcompanyassets = "0.15.79"
-ohotdog-LootableMusicTapes = "1.0.1"
+# removed 0.7.0 — improper scrap weights (100 weight on drop)
+# ohotdog-LootableMusicTapes = "1.0.1"
 bigmcnugget-VanillaContentExpansion = "0.1.8"
 etherealemil-UsualScrap = "1.9.8"
 Caigan-Tokucade_Scrap = "1.7.0"
@@ -144,12 +147,18 @@ XuXiaolan-PjonkGoose = "2.0.1"
 # New features
 Entity378-SellBodiesFixed = "1.14.0"
 mrgrm7-LethalCasino = "1.1.3"
+Electric131-OuijaBoard = "1.5.5"
 
 #######################
-# New dungeons & moons
+# New dungeons & interiors
 #######################
 theMenagerie-LiminalPools = "1.0.16"
 MrUnrealTeam-SchoolDungeon = "1.3.1"
+Generic_GMD-Generic_Interiors = "4.2.0"
+Magic_Wesley-WesleysInteriors = "4.1.15"
+Beaniebe-Storage_Complex = "1.2.2"
+DemonMae-Dungeons_Ultimately_Lacking_Liveliness = "1.8.5"
+Piggy-LC_Office = "2.3.4"
 AudioKnight-StarlancerEnemyEscape = "3.0.0"
 AudioKnight-StarlancerWarehouse = "1.7.0"
 AudioKnight-StarlancerAIFix = "3.13.1"

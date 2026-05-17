@@ -22,6 +22,7 @@ This pack was based off [Vanillaish_Heavy_v55_v56_Modpack](https://thunderstore.
 - [KlutzyBubbles-BetterEmotes](https://thunderstore.io/c/lethal-company/p/KlutzyBubbles/BetterEmotes/) - Fun emotes my friends are already used to using
 - [FlipMods-TooManyEmotes](https://thunderstore.io/c/lethal-company/p/FlipMods/TooManyEmotes/) - A large collection of emotes which can be bought from the shop.
 - [mrgrm7-LethalCasino](https://thunderstore.io/c/lethal-company/p/mrgrm7/LethalCasino/) - Adds a casino.
+- [Electric131-OuijaBoard](https://thunderstore.io/c/lethal-company/p/Electric131/OuijaBoard/) - Dead players can communicate through a Ouija board.
 
 #### Suits
 
@@ -49,11 +50,13 @@ This pack was based off [Vanillaish_Heavy_v55_v56_Modpack](https://thunderstore.
 - [red_eye-LethalAutocomplete](https://thunderstore.io/c/lethal-company/p/red_eye/LethalAutocomplete)
 - [ViViKo-SpectateDeathCause](https://thunderstore.io/c/lethal-company/p/ViViKo/SpectateDeathCause)
 - [MrHydralisk-MajorityVote](https://thunderstore.io/c/lethal-company/p/MrHydralisk/MajorityVote)
+- [ScienceBird-Universal_Radar](https://thunderstore.io/c/lethal-company/p/ScienceBird/Universal_Radar/) - Configurable contour maps to help navigate facilities.
 
 ### Changes & Fixes
 
 - [qwbarch-Mirage](https://thunderstore.io/c/lethal-company/p/qwbarch/Mirage/) - Allows monsters to speak like players.
 - [qwbarch-MirageCore](https://thunderstore.io/c/lethal-company/p/qwbarch/MirageCore/)
+- [ButteryStancakes-MaskFixes](https://thunderstore.io/c/lethal-company/p/ButteryStancakes/MaskFixes/) - Fixes mask items and masked enemies; pairs with Mirage.
 - [AgentRev-ShootableMouthDogs](https://thunderstore.io/c/lethal-company/p/AgentRev/ShootableMouthDogs/) - I read that by default dogs can't be shot.
 - [no00ob-LCSoundTool](https://thunderstore.io/c/lethal-company/p/no00ob/LCSoundTool/)
 - [Clementinise-CustomSounds](https://thunderstore.io/c/lethal-company/p/Clementinise/CustomSounds/)
@@ -83,13 +86,12 @@ Some of these scrap items have fun behaviors. Some of these mods also add store 
 - [Scrap 2](https://thunderstore.io/c/lethal-company/p/SimonTendo/LCGoldScrapMod/)
 - [Scrap 3](https://thunderstore.io/c/lethal-company/p/XuXiaolan/ImmersiveScrap/)
 - [Scrap 4](https://thunderstore.io/c/lethal-company/p/Sconeys/abandonedcompanyassets/)
-- [Scrap 5](https://thunderstore.io/c/lethal-company/p/ohotdog/LootableMusicTapes/)
-- [Scrap 6](https://thunderstore.io/c/lethal-company/p/bigmcnugget/VanillaContentExpansion/)
-- [Scrap 7](https://thunderstore.io/c/lethal-company/p/etherealemil/UsualScrap/)
-- [Scrap 8](https://thunderstore.io/c/lethal-company/p/Caigan/Tokucade_Scrap/)
-- [Scrap 9](https://thunderstore.io/c/lethal-company/p/FlipMods/TooManyEmotesScrap/)
-- [Scrap 10 & Behavior](https://thunderstore.io/c/lethal-company/p/slayer6409/Emergency_Dice_Updated/)
-- [Scrap 11 & Behavior](https://thunderstore.io/c/lethal-company/p/Entity378/SellBodiesFixed/)
+- [Scrap 5](https://thunderstore.io/c/lethal-company/p/bigmcnugget/VanillaContentExpansion/)
+- [Scrap 6](https://thunderstore.io/c/lethal-company/p/etherealemil/UsualScrap/)
+- [Scrap 7](https://thunderstore.io/c/lethal-company/p/Caigan/Tokucade_Scrap/)
+- [Scrap 8](https://thunderstore.io/c/lethal-company/p/FlipMods/TooManyEmotesScrap/)
+- [Scrap 9 & Behavior](https://thunderstore.io/c/lethal-company/p/slayer6409/Emergency_Dice_Updated/)
+- [Scrap 10 & Behavior](https://thunderstore.io/c/lethal-company/p/Entity378/SellBodiesFixed/)
 
 #### New Store Items
 
@@ -107,14 +109,21 @@ Some of these scrap items have fun behaviors. Some of these mods also add store 
 - [Monster 6](https://thunderstore.io/c/lethal-company/p/XuXiaolan/PjonkGoose/)
 - [Monster 8](https://thunderstore.io/c/lethal-company/p/x753/Mimics/)
 
-#### New Moons & Dongeons
+#### New Interiors & Moons
 
-I haven't really looked at these yet, These were the ones in the Vanillaish_Heavy modpack and I saw no reason to change or add more.
+Focus is on **facility variety** (which interior you roll into), not adding more moons.
 
-I'll likely try to add more later.
+**Interiors & dungeons**
 
 - [Liminal Pools](https://thunderstore.io/c/lethal-company/p/theMenagerie/LiminalPools/)
 - [School Dungeon](https://thunderstore.io/c/lethal-company/p/MrUnrealTeam/SchoolDungeon/)
+- [Generic Interiors](https://thunderstore.io/c/lethal-company/p/Generic_GMD/Generic_Interiors/)
+- [Wesley's Interiors](https://thunderstore.io/c/lethal-company/p/Magic_Wesley/WesleysInteriors/)
+- [Storage Complex](https://thunderstore.io/c/lethal-company/p/Beaniebe/Storage_Complex/)
+- [Dungeons Ultimately Lacking Liveliness](https://thunderstore.io/c/lethal-company/p/DemonMae/Dungeons_Ultimately_Lacking_Liveliness/)
+- [LC Office](https://thunderstore.io/c/lethal-company/p/Piggy/LC_Office/)
+
+**Moons (from Vanillaish_Heavy; unchanged focus)**
 - [Starlancer Enemy Escape](https://thunderstore.io/c/lethal-company/p/AudioKnight/StarlancerEnemyEscape/)
 - [Starlancer Warehouse](https://thunderstore.io/c/lethal-company/p/AudioKnight/StarlancerWarehouse/)
 - [Starlancer AI Fix](https://thunderstore.io/c/lethal-company/p/AudioKnight/StarlancerAIFix/)
