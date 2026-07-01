@@ -39,7 +39,7 @@ jobs:
           tcli publish --config-path thunderstore.testing.toml --package-version "1.0.${{ github.run_number }}"
 
       - name: Upload build artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: thunderstore
           path: ./dist/*
