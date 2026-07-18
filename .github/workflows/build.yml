@@ -17,7 +17,7 @@ jobs:
           filter: tree:0
 
       - name: Setup .NET environment
-        uses: actions/setup-dotnet@v4
+        uses: actions/setup-dotnet@v6
         with:
           dotnet-version: "8.0.100"
 
